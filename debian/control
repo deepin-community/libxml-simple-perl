@@ -1,0 +1,41 @@
+Source: libxml-simple-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ansgar Burchardt <ansgar@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: perl,
+                     libtie-ixhash-perl,
+                     libxml-libxml-perl | libxml-sax-expat-perl,
+                     libxml-namespacesupport-perl,
+                     libxml-parser-perl,
+                     libxml-sax-perl
+Standards-Version: 4.1.3
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libxml-simple-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libxml-simple-perl.git
+Homepage: https://metacpan.org/release/XML-Simple
+
+Package: libxml-simple-perl
+Architecture: all
+Multi-Arch: foreign
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libxml-libxml-perl | libxml-sax-expat-perl,
+         libxml-namespacesupport-perl,
+         libxml-sax-perl
+Description: Perl module for reading and writing XML
+ The XML::Simple module provides a simple API layer on top of an underlying
+ XML parsing module to maintain XML files (especially configuration
+ files).  Two functions are exported: XMLin() and XMLout().
+ .
+ The simplest approach is to call these two functions directly, but an
+ optional object oriented interface allows them to be called as
+ methods of an XML::Simple object.  The object interface can also be
+ used at either end of a SAX pipeline.
+ .
+ Note from upstream: The use of this module in new code is strongly
+ discouraged. Other modules are available which provide more straightforward
+ and consistent interfaces. In particular, XML::LibXML is highly recommended.
+ XML::Twig is another excellent alternative.These modules are packaged as
+ libxml-libxml-perl and libxml-twig-perl in Debian.

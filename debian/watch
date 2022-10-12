@@ -1,0 +1,4 @@
+version=3
+opts="uversionmangle=s/^v(\d)/$1/;s/^\.(\d)/0.$1/" \
+https://metacpan.org/release/XML-Simple \
+.*/XML-Simple-(v?[\d\.]+(?:a|b|b\d+|RC\d+)?).(?:tar\.gz|tgz|tar\.bz2|zip|pm\.gz|jar|shar\.gz|shar\.Z)
